@@ -23,21 +23,21 @@
         <!-- begin app-wrap -->
         <div class="app-wrap">
             <!-- begin pre-loader -->
-            <div class="loader">
+            {{-- <div class="loader">
                 <div class="h-100 d-flex justify-content-center">
                     <div class="align-self-center">
                         <img src="assets/img/loader/loader.svg" alt="loader">
                     </div>
                 </div>
-            </div>
+            </div> --}}
             <!-- end pre-loader -->
             <!-- begin app-header -->
-            @include('layouts.header')
+            @include('backend.layouts.header')
             <!-- end app-header -->
             <!-- begin app-container -->
             <div class="app-container">
                 <!-- begin app-nabar -->
-                @include('layouts.sidebar')
+                @include('backend.layouts.sidebar')
                 
                 <!-- end app-navbar -->
                 <!-- begin app-main -->
@@ -51,7 +51,7 @@
             </div>
             <!-- end app-container -->
             <!-- begin footer -->
-            @include('layouts.footer')
+            @include('backend.layouts.footer')
             <!-- end footer -->
         </div>
         <!-- end app-wrap -->

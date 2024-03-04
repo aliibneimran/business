@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\ProjectController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -22,6 +23,8 @@ Route::prefix('admin')->group(function(){
     Route::get('/logout',[AdminController::class,'logout'])->name('admin_logout')->middleware('admin');
     Route::get('register',[AdminController::class,'register'])->name('admin_register');
     Route::post('register/create',[AdminController::class,'registration'])->name('admin.register.create');
+
+    Route::resource('projects', ProjectController::class)->middleware('admin');
 });
 
 Route::get('/', function () {

@@ -10,7 +10,7 @@ use Illuminate\Support\Facades\Hash;
 class AdminController extends Controller
 {
     public function index(){
-        return view('admin.login');
+        return view('backend.admin.login');
     }
     public function login(Request $request){
         // dd($request->all());
@@ -21,14 +21,14 @@ class AdminController extends Controller
         }
     }
     public function dashboard(){
-        return view('admin.dashboard');
+        return view('backend.admin.dashboard');
     }
     public function logout(){
         Auth::guard('admin')->logout();
         return redirect()->route('admin_login_form');
     }
     public function register(){
-        return view('admin.register');
+        return view('backend.admin.register');
     }
     public function registration(Request $request){  
         $admin = Admin::create([
